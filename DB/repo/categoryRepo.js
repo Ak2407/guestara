@@ -17,15 +17,18 @@ const categoryRepo = {
     return await categoryModel.updateOne({ _id: category.id }, category.data);
   },
   addSubCategory: async (subCategory) => {
-    return await categoryModel.updateOne(
+    return await categoryModel.findByIdAndUpdate(
       { _id: subCategory.category },
+
       { $push: { subcategories: subCategory } },
+      { new: true },
     );
   },
   addItem: async (item) => {
-    return await categoryModel.updateOne(
+    return await categoryModel.findByIdAndUpdate(
       { _id: item.category },
       { $push: { items: item } },
+      { new: true },
     );
   },
 };
