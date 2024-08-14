@@ -45,6 +45,8 @@ const subCategoryCtrl = {
   updateSubCategory: async (req, res) => {
     try {
       const subCategory = await repo.updateSubCategory(req.body);
+      if (subCategory) {
+      }
       res.status(200).json(subCategory);
     } catch (error) {
       res.status(500).json({ message: "Error in updating sub category" });

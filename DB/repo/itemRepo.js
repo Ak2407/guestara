@@ -21,7 +21,7 @@ const itemRepo = {
     return await itemModel.create(item);
   },
   updateItem: async (item) => {
-    return await itemModel.findByIdAndUpdate({ _id: item.id }, item.data, {
+    return await itemModel.findOneAndUpdate({ _id: item.id }, item.data, {
       new: true,
     });
   },

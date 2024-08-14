@@ -15,18 +15,17 @@ const subcategoryRepo = {
     return await subcategoryModel.findById(id);
   },
   createSubCategory: async (subcategory) => {
-    console.log(subcategory);
     return await subcategoryModel.create(subcategory);
   },
   updateSubCategory: async (subcategory) => {
-    return await subcategoryModel.finbyIdAndUpdate(
+    return await subcategoryModel.findOneAndUpdate(
       { _id: subcategory.id },
       subcategory.data,
       { new: true },
     );
   },
   addItem: async (item) => {
-    return await subcategoryModel.findByIdAndUpdate(
+    return await subcategoryModel.findOneAndUpdate(
       { _id: item.subcategory },
       { $push: { items: item } },
       { new: true },

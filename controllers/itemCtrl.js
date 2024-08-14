@@ -34,7 +34,6 @@ const itemCtrl = {
   getItemByCategory: async (req, res) => {
     try {
       const obj = req.params;
-      console.log(req.params);
       const { category } = obj;
       const item = await repo.getItemByCategory(category);
       res.status(200).json(item);

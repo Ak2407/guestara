@@ -17,7 +17,7 @@ const categoryRepo = {
     return await categoryModel.updateOne({ _id: category.id }, category.data);
   },
   addSubCategory: async (subCategory) => {
-    return await categoryModel.findByIdAndUpdate(
+    return await categoryModel.findOneAndUpdate(
       { _id: subCategory.category },
 
       { $push: { subcategories: subCategory } },
@@ -25,7 +25,7 @@ const categoryRepo = {
     );
   },
   addItem: async (item) => {
-    return await categoryModel.findByIdAndUpdate(
+    return await categoryModel.findOneAndUpdate(
       { _id: item.category },
       { $push: { items: item } },
       { new: true },
