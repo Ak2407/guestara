@@ -3,7 +3,7 @@ import categoryRepo from "../DB/repo/categoryRepo.js";
 import subcategoryRepo from "../DB/repo/subCategoryRepo.js";
 
 const itemCtrl = {
-  getAllItems: async (res) => {
+  getAllItems: async (req, res) => {
     try {
       const items = await repo.getAllItems();
       res.status(200).json(items);

@@ -2,7 +2,7 @@ import repo from "../DB/repo/subCategoryRepo.js";
 import categoryRepo from "../DB/repo/categoryRepo.js";
 
 const subCategoryCtrl = {
-  getAllSubCategories: async (res) => {
+  getAllSubCategories: async (req, res) => {
     try {
       const subCategories = await repo.getAllSubCategories();
       res.status(200).json(subCategories);
