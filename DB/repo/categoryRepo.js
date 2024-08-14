@@ -14,7 +14,11 @@ const categoryRepo = {
     return await categoryModel.create(category);
   },
   updateCategory: async (category) => {
-    return await categoryModel.updateOne({ _id: category.id }, category.data);
+    return await categoryModel.findOneAndUpdate(
+      { _id: category.id },
+      category.data,
+      { new: true },
+    );
   },
   addSubCategory: async (subCategory) => {
     return await categoryModel.findOneAndUpdate(
