@@ -1,3 +1,5 @@
+For using API you can use this api : https://guestara.onrender.com
+
 Steps to run the project
 
 1. Clone the project
