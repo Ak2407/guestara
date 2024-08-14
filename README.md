@@ -25,7 +25,7 @@ npm start
 
 # Guestara Backend Internship Assignment Documentation
 
-1. **Loom Link Explaining the Operations:** [Loom Link](https://www.loom.com/share/a0a1c1a7b5a94a4d8a5d6a3d7a2c6b1d)
+1. **Loom Links Explaining the Operations (Two links due to limit of loom):** [loom link 1](https://www.loom.com/share/e25a9327ed0449a4b0c25a846aab6d2e?sid=7a4f8fd8-48dc-44eb-82d8-a3f1049ce2a9) [loom link 2](https://www.loom.com/share/f3011ba6209b4ce89a4157c51c247fba?sid=5d6976f9-91c3-4161-a44e-129f4ac24a68)
 
 2. **Hosted Code Github Repository (Along With Readme):** [GitHub Repository](https://github.com/Ak2407/guestara)
 
@@ -41,7 +41,7 @@ npm start
 
      - How to use middleware in Mongoose (pre and post)
      - How to use regex in Mongoose
-     - Nil
+     - How to avoid data inconsistency when storing items
 
    - **Q. What was the most difficult part of the assignment?**  
      **A.** The middleware was the most difficult as I had no prior knowledge about it. It wasn’t extremely challenging, but it was new to me.
