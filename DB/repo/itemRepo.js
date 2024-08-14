@@ -1,4 +1,5 @@
 import itemModel from "../models/itemModel.js";
+import subcategoryModel from "../models/subcategoryModel.js";
 
 const itemRepo = {
   getAllItems: async () => {
@@ -21,6 +22,14 @@ const itemRepo = {
     return await itemModel.create(item);
   },
   updateItem: async (item) => {
+    if (item.data.subcategory) {
+      const subcategory = await subcategoryModel.findOneAndUpdate(
+        { _id: item.data.subcategory },
+        { $push: { items: item.id } },
+        { new: true },
+      );
+    }
+
     return await itemModel.findOneAndUpdate({ _id: item.id }, item.data, {
       new: true,
     });
